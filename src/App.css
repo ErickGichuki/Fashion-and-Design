@@ -1,0 +1,51 @@
+.nav-link{
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #0aa8a5;
+    transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width:100%;
+    left: 0;
+}
+
+.bottom-link{
+    position: relative;
+    display: inline-block;
+}
+.bottom-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #13e680;
+    transition: width 0.4s ease-in-out;
+}
+.bottom-link:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+@keyframes upDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .up-down {
+    animation: upDown 3s ease-in-out infinite;
+  }
+  
